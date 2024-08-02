@@ -4,39 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="icon.png">
-    <title>Places List</title>
+    <link rel="icon" href="icon.png" type="image/png">
+    <title>Places</title>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo" class="logo">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="login.html" class="login-button">Login</a>
-        </nav>
+        <img src="logo.png" alt="Application Logo" class="logo">
+        <a href="login.html" id="login-link" class="login-button">Login</a>
     </header>
-
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+    </nav>
     <main>
         <h1>List of Places</h1>
-        <div class="place-card">
-            <img src="images/place1.jpg" alt="Place 1" class="place-image">
-            <h2>Place 1</h2>
-            <p>Price: $100/night</p>
-            <p>Location: Caguas, PR</p>
-            <button class="details-button">View Details</button>
-        </div>
-        <div class="place-card">
-            <img src="images/place2.jpg" alt="Place 2" class="place-image">
-            <h2>Place 2</h2>
-            <p>Price: $150/night</p>
-            <p>Location: City, Country</p>
-            <button class="details-button">View Details</button>
-        </div>
-        <!-- Add more places as needed -->
+        <label for="country-filter">Filter by Country:</label>
+        <select id="country-filter">
+            <option value="">All Countries</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Australia</option>
+            
+        </select>
+        <div id="places-list"></div> 
     </main>
-
     <footer>
         <p>&copy; 2024 All rights reserved.</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
